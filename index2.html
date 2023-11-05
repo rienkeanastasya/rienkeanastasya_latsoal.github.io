@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No.2 Latihan Soal Hal-35</title>
+</head>
+<body>
+  <h1>Kalkulator</h1>
+  <input type="text" id="bilangan1" placeholder="Bilangan 1">
+  <input type="text" id="bilangan2" placeholder="Bilangan 2"><br>
+  <button onclick="tambah()">+</button>
+  <button onclick="kurang()">-</button>
+  <button onclick="kali()">x</button>
+  <button onclick="bagi()">/</button><br>
+  <input type="text" id="hasil" placeholder="Hasil Operasi" readonly>
+
+  <script>
+    function tambah() {
+      const bil1 = parseFloat(document.getElementById('bilangan1').value);
+      const bil2 = parseFloat(document.getElementById('bilangan2').value);
+      const hasil = bil1 + bil2;
+      document.getElementById('hasil').value = hasil;
+    }
+
+    function kurang() {
+      const bil1 = parseFloat(document.getElementById('bilangan1').value);
+      const bil2 = parseFloat(document.getElementById('bilangan2').value);
+      const hasil = bil1 - bil2;
+      document.getElementById('hasil').value = hasil;
+    }
+
+    function kali() {
+      const bil1 = parseFloat(document.getElementById('bilangan1').value);
+      const bil2 = parseFloat(document.getElementById('bilangan2').value);
+      const hasil = bil1 * bil2;
+      document.getElementById('hasil').value = hasil;
+    }
+
+    function bagi() {
+      const bil1 = parseFloat(document.getElementById('bilangan1').value);
+      const bil2 = parseFloat(document.getElementById('bilangan2').value);
+      if (bil2 !== 0) {
+        const hasil = bil1 / bil2;
+        document.getElementById('hasil').value = hasil;
+      } else {
+        document.getElementById('hasil').value = "Tidak dapat membagi dengan nol";
+      }
+    }
+  </script>
+</body>
+</html>
